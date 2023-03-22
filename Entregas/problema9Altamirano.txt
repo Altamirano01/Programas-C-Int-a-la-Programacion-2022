@@ -1,0 +1,47 @@
+Datos: punto //Punto en el plano de tipo TPunto
+circulo // Corrdenadas centro del circulo de tipo TPunto
+radio //Del circulo
+Resultados: respuesta// del tipo logico que almacena verdadero si el punto esta dentro del circulo
+Relaciones:
+  Con las acciones de los problemas anteriores(5,7) cargo los datos del punto y circulo 
+  Accion DondeEsta con parametro dato p, c  y parametro resultado res
+En lexico local de la accion agrego una variable d del tipo R
+d = raiz((p.x - c.x) * (p.x - c.x)) + ((p.y - c.y) * (p.y - c.y))
+Si d <= r entonces
+ res = verdadero
+ sino
+ res = falso
+
+Algoritmo Problema9
+Lexico
+   TPunto=<x,y E R>
+   circulo E TPunto
+   punto E TPunto
+   respuesta E Logico
+ Accion CargarPunto(resultado a E TPunto)
+ Inicio
+    Entrada: a.x  a.y
+ faccion
+ 
+ Accion CargarCirculo(resultado c E TPunto)
+ Inicio
+    Entrada: c.x  c.y  c.r
+ faccion
+
+ Accion DondeEsta(dato c E TCirculo, p E TPunto, , resultado res E Logico)
+ Lexico local
+  d E R
+ Inicio
+   d <- raiz(((p.x - c.x) * (p.x - c.x)) + ((p.y - c.y) * (p.y - c.y)))
+   si d <= c.r entonces
+      res <- verdadero
+   sino
+      res <- falso
+   fsi 
+faccion
+Inicio
+    CargarPunto(punto)
+    CargarCirculo(circulo)
+    DondeEsta(circulo, punto, resultado)
+ Salida: resultado
+Fin

@@ -1,0 +1,25 @@
+Datos: diasVuelo //Cantidad de dias que faltan para el dia de salida
+       cantPasajes //Solo puede comprar 2 como maximo(ida-vuelta)
+Resultados: precioPasaje 
+Relaciones: 
+Si los diasVuelo >= 30 entonces el precioPasaje = 4650 * cantPasajes
+si diasVuelo mayor o igual a 15 y menor a 30 entonces el precioPasaje = 5350 * cantPasajes
+si diasVuelo menor a 15 y mayor o igual a 1 entonces el precioPasaje = 6875 * cantPasajes
+Si el diasVuelo es menor a 1 no puede comprar, con una salida saco un mensaje que diga error
+
+Algoritmo PasajeAvion
+Lexico
+    diasVuelo, cantPasajes E Z+
+    precioPasaje E R
+Inicio
+  Entrada: diasVuelo cantPasajes
+    Segun
+     (diasVuelo >= 30) : precioPasaje = 4650 * cantPasajes
+     (15 <= diasVuelo < 30) : precioPasaje = 5350 * cantPasajes
+     (1 <= diasVuelo < 15) : precioPasaje = 6875 * cantPasajes
+     (diasVuelo < 1) : Salida: "No se puede comprar pasajes para esa fecha"
+    fsegun
+  Salida: precioPasaje  
+Fin  
+
+
