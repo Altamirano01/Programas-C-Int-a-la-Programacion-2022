@@ -1,0 +1,12 @@
+Datos: lado //medida de lado del cuadrado
+Resultados: areaC areaI perimC
+Relaciones:
+A partir de las funciones dadas en la teoria calculo lo que me piden
+
+Algortimo Problema2Practico5
+Lexico
+	lado E R
+	PI = 3,1416
+	
+Inicio
+Fin

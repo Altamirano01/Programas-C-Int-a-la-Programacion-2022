@@ -1,0 +1,32 @@
+Datos: ganancias	perdidas
+Resultados:	balance
+Relaciones:
+La lista se termina con un 9999999
+
+Algoritmo BalanceNegocio
+Lexico
+	balance, ganancias, perdidas, gananciaNeta, perdidaNeta E R
+	mensaje, finalizar E Cadena
+Inicio
+
+	mientras (finalizar <> 'S') hacer            //Se hace la entrada de todas las ganancias en lista, se ingresa un 99999 para terminar de ingresarlas
+		entrada: ganancias //Numeros positivos
+		entrada: finalizar
+		gananciaNeta = gananciaNeta + ganancias 
+	fmientras
+	
+	mientras (finalizar <> 's') hacer           //Se hace la entrada de todas las ganancias en lista, se ingresa un 99999 para terminar de ingresarlas
+		entrada: perdidas//Numeros negativos
+		entrada: finalizar
+		perdidaNeta <- perdidaNeta + perdidas
+	fmientras
+	
+	balance <- gananciaNeta - perdidaNeta //Se suman las ganancias y las perdidas y se hace el balance
+		segun
+		(balance > 0) : mensaje <- "El balance ha sido positivo"
+		(balance < 0) : mensaje <- "El balance ha sido negativo"
+		(balance = 0) : mensaje <- "El balance ha sido neutro"
+		  salida: mensaje
+		fsegun
+	salida: balance // Dice cuanto es el valance
+Fin

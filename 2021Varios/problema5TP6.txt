@@ -1,0 +1,12 @@
+Altoritmo CargarPuntos
+Lexico
+  Tpunto = <x E R, y E R>
+  punto1, punto2 E Tpunto
+  
+  Accion cargarPuntos(dato p1, p2 E Tpunto)
+   Inicio
+    Entrada: p1 p2
+  faccion
+Inicio
+ cargarPuntos(punto1, punto2)
+Fin 

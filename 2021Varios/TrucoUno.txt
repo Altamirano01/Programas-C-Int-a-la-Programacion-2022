@@ -1,0 +1,25 @@
+Datos: carta1 carta2 carta3
+Resultados: mensaje //1 si tiene 3 cartas iguales(flor), 2 si tiene envido(2 mismo palo), 0 si tiene 3 cartas distinto palo
+Relaciones: 
+ 
+Algoritmo TrucoUno
+Lexico
+ carta1, carta2, carta3 E TCartas
+ TCartas = <palo E [palo, oro, basto, copa], num E [1..12]>
+ jugadorTiene E Z
+ funcion queTiene(dato c1, c2, c3 E TCartas) -> [0, 1, 2] //cada cN hace alucion a cada carta
+   inicio
+     segun
+	 (c1.palo = c2.palo) y (c2.palo = c3.palo) : <- 1 // Tiene 3 cartas iguales
+	 (c1.palo = c2.palo) y (c2.palo <> c3.palo) y (c3.palo <> c1.palo) : <- 2
+	 (c1.palo <> c2.palo) y (c2.palo = c3.palo) y (c3.palo <> c1.palo) : <- 2
+	 (c1.palo <> c2.palo) y (c2.palo <> c3.palo) y (c3.palo = c1.palo) : <- 2 // Tiene envido
+	 (c1.palo <> c2.palo) y (c2.palo <> c3.palo) y (c3.palo <> c1.palo) : <- 0 // Tiene 3 cartas distinto palo
+	 fsegun
+ ffuncion
+Inicio
+ entrada: carta1 carta2 carta3
+  jugadorTiene <- queTiene(carta1, carta2, carta3)
+ salida: jugadorTiene
+Fin
+	//No es lo que pide el ejercicio

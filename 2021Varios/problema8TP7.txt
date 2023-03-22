@@ -1,0 +1,66 @@
+Resultado: Promedio total
+nros aprobadors y reprobados y porcentaje de los mismos
+
+
+Algoritmo
+Lexico
+Max = 200
+TElem = (0..10)
+TNumeros = arreglo [1..Max] de TElem
+TData = <a E TNumeros, cant E (0..Max)>
+misNotas E TData
+Promedio E R
+aprobados E Z
+desaprobados E Z
+nmax E (o..Max + 1) // Es la cantidad de alumnos
+
+Accion CargarNotas(resultado notas E TData)
+Lexico local
+ i E Z
+ Inicio
+ Entrada: notas.cant
+ para(i <- 1, i <= notas.cant, i <- i + 1) hacer
+      Entrada: notas.a[i]
+ fpara
+FAccion
+
+funcion CalcularPromedio(dato n E TData)-> R
+ lexico local
+  i E Z
+  p E R
+  Inicio
+  p <- 0
+ para(i <- 1, i <= n.cant, i <- i+1) hacer 
+     p <- p + n.a[i]
+  fpara
+   <- p / n.cant
+ ffuncion
+ 
+ Funcion NumAprobados(dato n E TData) -> R
+  Lexico local
+   i E Z
+   p E R
+   suma E Z
+   Inicio 
+   p <- 0
+   suma <- 0
+   
+   para(i <- 1, i <= n.cant,i <- i + 1) hacer
+      si n.a[i] >= 5 entonces
+	      suma <- suma + 1
+      fsi 		  
+   fpara
+   <- suma
+   ffuncion
+ Inicio
+  Entrada: NMax
+  misNotas <- CargarNotas(misNotas)
+  promedio <- CalcularPromedio(misNotas)
+  aprobados <- NumAprobados(misNotas)
+  desaprobados <- misNotas.cant - NumAprobados(misNotas)  
+  porcentajeAprobados <- 100 * (NumAprobados(misNotas)) / n.cant
+  porcentajeReprobados <- 100 * (misNotas.cant - NumAprobados(misNotas)) / n.cant
+  Salida: promedio aprobados desaprobados porcentajeAprobados porcentajeDesaprobados
+  Fin
+  
+  

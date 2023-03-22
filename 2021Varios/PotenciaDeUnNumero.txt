@@ -1,0 +1,19 @@
+Datos: a y//Potencia de a
+Resultados: potencia
+Relaciones:
+Se ingresa a e y, luego se hace a elevado a la y y luego se muestra en la salida esa potencia
+
+Algorimo PotenciaDeUnNumero
+Lexico
+	a, y E Z
+	potencia  E R
+	i E Z
+Inicio
+	entrada: a y
+	potencia <- 1
+		para(i = 1; i <= y; i = i + 1) hacer
+			potencia <- potencia * a
+		fpara
+		
+	salida: potencia	
+Fin

@@ -1,0 +1,25 @@
+Algoritmo
+Lexico
+ num E R
+ numGanador = 73
+ mensaje E Cadena
+	funcion Ganador(dato n, nGan)-> Cadena
+		Si (n = nGan) entonces
+			<- "Ganaste"
+			
+		sino
+			<-"Perdiste"
+		fsi
+	ffuncion
+Inicio 
+ intentos E Z
+ intentos <- 1
+  mientras(intentos < 10) hacer
+	Entrada: num
+	mensaje <- Ganador(num, numGanador)
+	si (mensaje = "Ganaste") entonces
+		intentos <- 11
+	sino
+		intentos <- intentos + 1
+	salida:mensaje
+Fin

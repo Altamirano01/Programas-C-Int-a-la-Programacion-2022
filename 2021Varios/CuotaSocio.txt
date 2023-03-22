@@ -1,0 +1,27 @@
+Datos: valorCuota antiguedad
+Resultados: montoPagar
+Relaciones:
+Si antiguedad es menor a 5 entonces para el valor de la cuota entero, si es mayor a 5 entonces
+se le hace un descuento del 8%
+
+Algoritmo CuotaSocio
+Lexico
+	valorCuota E R
+	antiguedad E R
+	montoPagar E R
+  funcion CuotaSocio(dato monto, antig E R) -> R
+   inicio
+		si (antig > 5) entonces
+		   <- monto * 0.8  //monto = valorCuota en parametro formal
+		sino 
+			<- monto
+		fsi
+   ffuncion
+Inicio
+  entrada: antiguedad valorCuota
+     montoPagar <- CuotaSocio(valorCuota, antiguedad)  
+  salida: montoPagar
+Fin
+
+
+//Otra forma: salida: montoPagar(valorCuota, antiguedad)

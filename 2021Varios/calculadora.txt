@@ -1,0 +1,33 @@
+Datos: num1 num2 operador
+Resultados: resultado
+Relaciones: 
+operador esta comprendido [+ , - , * , /], la division por 0 lanza un mensaje de error y el resultado sera 99999
+
+Algoritmo Calculadora
+Lexico
+ num1, num2 E R
+ operador E Toperador
+ mensaje E Cadena
+ Toperador = <'+'. '-', '*', '/'>
+	Accion Calcular(dato n1, n2 E R, dato op E Toperador, resultado res E R)
+	 Lexico local
+		msj E Cadena
+	 Inicio
+	  segun
+			(op = '+') : res <- n1 + n2
+			(op = '-') : res <- n1 - n2
+			(op = '*') : res <- n1 * n2
+			(op = '/') : res <- n1 / n2
+			(op = '+') y (n2 = 0): res <- 99999 msj <- "Error"
+	  fsegun
+		salida: msj
+	faccion
+Inicio 
+ Entrada: num1 num2 operador
+  Si(operador <> '+') y (operador <> '-') y (operador <> '*') y (operador <> '/') entonces
+     mensaje <- "El operador ingresado es incorrecto"
+	 salida: mensaje
+  sino
+	resultado <- Calculo(num1, num2, operador)
+	salida: resultado
+Fin	

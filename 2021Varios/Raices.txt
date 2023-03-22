@@ -1,0 +1,36 @@
+Datos: ax bx c //Coeficientes de la formula cuadratica 
+Resultados: raices //Si se pueden calcular y cuantas son
+Relaciones:
+si a=0 y b=0 raices<- degenerada
+si a=0 y b<>0 raices <- existe una sola
+	si a<>0 y b<>0 
+		d= b*b - 4*a*c
+		segun 
+		   d>0 : raices <- 2 reales
+		   d<0 : raices <- 2 complejas
+		   d=0: raices <- una sola
+
+
+Algoritmo Raices
+Lexico
+	ax, bx, c, d E R
+	raices E Cadena
+Inicio
+	entrada: ax bx c
+		Si (ax = 0) y (bx = 0) entonces
+			raices <- "La ecuacion es degenerada"
+		fsi
+		si(ax = 0) y (bx <> 0) entonces
+			raices <- "Existe una unica raiz"
+		fsi
+		si(ax <> 0) y (bx <> 0) entonces
+			d <- bx * bx - 4 * ax * c
+			segun
+				(d > 0) : raices <- "Existen dos raices reales"
+				(d < 0) : raices <- "Existe una sola raiz"
+				(d = 0) : raices <- "Existen dos raices complejas"
+			fsegun
+		fsi	
+		
+	salida: raices
+Fin

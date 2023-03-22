@@ -1,0 +1,40 @@
+Algoritmo AreaFiguras
+Lexico
+  x, y, z, sup E R
+	Accion Cargar(resultado a, b E R, resultado f E Caracter)
+	 Inicio
+		Entrada: f //Ingresa t para triang y r para rectang
+		 Si(f = 'r') entonces
+		    Entrada: a b //Ingresa el primer y segundo lado del rectangulo 
+		 sino
+			Entrada: a b //Ingresa la base y la altura del triangulo respectivamente
+		 fsi
+	faccion
+
+	Accion Calcular(dato a, b E R, dato f E Caracter, resultado area E R)
+	 Lexico local
+	   s E R
+	 Inicio
+		Si(f = 'r') entonces
+			area <- a * b
+		sino
+			area <- a * b / 2
+		fsi
+	 faccion
+	 
+	 Accion Mostrar(dato a, b E R, dato f E Caracter, dato area E R)
+	  Lexico local
+		msge E Cadena
+	  Inicio
+		Si(f = 'r') entonces
+			msge <- "El area del rectangulo dado por los lados"
+		sino
+			msge <- "El area del triangulo dado por la altura y la base"
+		fsi
+		salida: msge a b area
+	 faccion
+Inicio
+  Cargar(x, y, z)
+  Calcular(x, y, z, sup)
+  Mostrar(x, y, z, sup)
+Fin 

@@ -1,0 +1,46 @@
+Algoritmo Problema14
+Lexico
+ Max = 200
+ TElem = Caracter
+ TCaracter = arreglo [1..Max] de TElem
+ TData= <a E TCaracter , cant [1..Max]>
+ frase E TData
+ 
+ Accion CargarFrase (resultado f E TData)
+  Lexico local
+    i E Z
+  inicio
+    Entrada: f.cant
+	i <- 1
+		para(i <- 1, i <= f.cant , i <- i + 1) hacer
+			Entrada: f.a[i]
+		fpara	
+ Faccion
+
+ Accion EliminarBlancos(dato f E TData, r) 
+  Lexico local
+	i E Z
+	e E ' ' //Espacio
+	aux E Z
+  inicio
+   i <- 1
+   mientras ((i <= f.cant) y (f.a[i] <> e)) hacer
+     i <- i + 1
+   fmientras
+	aux <- i + 1
+   mientras (aux <= f.cant) hacer
+      f.a[aux-1] <- f.a[aux]
+	  aux <- aux + 1
+   fmientras
+	f.cant <- f.cant - 1 //Las posiciones utilizadas son menos
+ FAccion
+ 
+ Accion MostrarFrase(dato f E TData)
+  Lexico local
+   i E Z
+  Inicio
+	para(i <- 1, i <= f.cant , i <- i + 1) hacer
+	   salida: f.a[i]
+ faccion	   
+ 
+ 

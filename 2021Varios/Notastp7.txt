@@ -1,0 +1,38 @@
+Datos: 200 notas, entre 1 y 10
+Resultado: promedio
+
+
+Algoritmo Notas
+Lexico
+ Max = 200
+ TElem = (1..10)
+ TNumeros = arreglo [1..Max] de TElem
+ TData = <a E TNumeros, cant E (0..Max)>
+ misNotas E TData
+ promedio E R
+ 
+   Accion CargarNotas(resultado notas E TData)
+	Lexico local
+	  i E Z
+	Inicio
+		Entrada: notas.cant // Ingresa la cantidad de notas que va a cargar
+		para(i <- 1, i <= notas.cant, i <- i+1) hacer
+		    Entrada: notas.a[i] //Ingresa cada nota y la almacena en el arreglo
+		fpara
+	FAccion	
+	
+	Accion PromedioNotas (dato x E TData, resultado aux E R)
+	   Lexico local
+			i E Z
+			p E Z
+		Inicio
+			p <- 0
+	   para(i <- 1, i <= x.cant, i <- i + 1)hacer
+		 p <- p + x.a[i]
+		fpara
+		aux <- p / x.cant	
+	FAccion
+Inicio
+CargarNotas(misNotas)
+PromedioNotas(misNotaspromedio)
+	
